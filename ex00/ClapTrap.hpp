@@ -9,7 +9,7 @@ class ClapTrap
         std::string name;
         int hit_pts;
         int energy_pts;
-        int damage_pts;
+        int attack_damage_pts;
 
     public:
         ClapTrap();
