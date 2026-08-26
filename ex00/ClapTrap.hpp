@@ -7,11 +7,17 @@ class ClapTrap
 {
     private:
         std::string name;
-        int hit_pts = 10;
-        int energy_pts = 10;
-        int damage_pts = 0;
+        int hit_pts;
+        int energy_pts;
+        int damage_pts;
 
     public:
+        ClapTrap();
+        ClapTrap(std::string name);
+        ClapTrap(const ClapTrap& ref);
+        ClapTrap& operator=(const ClapTrap& ref);
+        //todo: copy & assignment copy 
+        ~ClapTrap();
         void attack(const std::string& target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
