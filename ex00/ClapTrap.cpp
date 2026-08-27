@@ -1,6 +1,6 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string my_name) : name(my_name), hit_pts(10), energy_pts(2), attack_damage_pts(0)
+ClapTrap::ClapTrap(std::string my_name) : name(my_name), hit_pts(10), energy_pts(10), attack_damage_pts(0)
 {
     std::cout << "Hello my name is " << name << "." << std::endl;
 }
@@ -27,14 +27,19 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& ref)
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << name << " est mort." << std::endl;
+    std::cout << name << " died." << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target)
 {
     if (energy_pts == 0)
     {
-        std::cout << "I dont have any energy..." << energy_pts << std::endl;
+        std::cout << "I dont have any energy..." << std::endl;
+        return;
+    }
+    else if (hit_pts == 0)
+    {
+        std::cout << "I dont have any hit points left..." << std::endl;
         return;
     }
     std::cout << "ClapTrap " << name << " attacks " << target << ", causing " << 
@@ -55,7 +60,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
     if (energy_pts == 0)
     {
-        std::cout << "I dont have any energy..." << energy_pts << std::endl;
+        std::cout << "I dont have any energy..." << std::endl;
         return;
     }
     std::cout << "ClapTrap " << name << " is repairing himself... Regaining " << amount << " hit point(s)" << std::endl;
