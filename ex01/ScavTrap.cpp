@@ -23,13 +23,13 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
     // std::cout << my_name << "'s attack damage points: " << attack_damage_pts << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& ref)
+ScavTrap::ScavTrap(const ScavTrap& ref) : ClapTrap(ref)
 {
     my_name = ref.my_name;
     hit_pts = ref.hit_pts;
     energy_pts = ref.energy_pts;
     attack_damage_pts = ref.attack_damage_pts;
-    std::cout << "Copy constructor called" << std::endl;
+    std::cout << "ScavTrap copy constructor called" << std::endl;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& ref)
@@ -38,7 +38,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& ref)
     hit_pts = ref.hit_pts;
     energy_pts = ref.energy_pts;
     attack_damage_pts = ref.attack_damage_pts;
-    std::cout << "Copy assignment operator called" << std::endl;
+    std::cout << "ScavTrap copy assignment operator called" << std::endl;
     return (*this);
 }
 

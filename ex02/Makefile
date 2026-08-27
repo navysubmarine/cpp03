@@ -2,7 +2,7 @@ NAME		= repetitivework
  
 CC			= c++ -Wall -Wextra -Werror -std=c++98
  
-SRCS		= main.cpp ClapTrap.cpp ScavTrap.cpp
+SRCS		= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJS		= $(SRCS:.cpp=.o)
  
 all: $(NAME)
@@ -10,7 +10,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CC) -o $(NAME) $(OBJS)
  
-%.o: %.cpp ClapTrap.hpp ScavTrap.jpp
+%.o: %.cpp ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 	$(CC) -c $< -o $@
  
 clean:

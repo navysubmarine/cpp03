@@ -10,7 +10,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CC) -o $(NAME) $(OBJS)
  
-%.o: %.cpp ClapTrap.hpp ScavTrap.jpp
+%.o: %.cpp ClapTrap.hpp ScavTrap.hpp
 	$(CC) -c $< -o $@
  
 clean:
