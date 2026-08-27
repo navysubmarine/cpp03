@@ -1,4 +1,4 @@
-NAME		= prog
+NAME		= aaaaaandOPEN
  
 CC			= c++ -Wall -Wextra -Werror -std=c++98
  
