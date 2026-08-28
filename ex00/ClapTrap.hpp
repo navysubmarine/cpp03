@@ -16,7 +16,6 @@ class ClapTrap
         ClapTrap(std::string name);
         ClapTrap(const ClapTrap& ref);
         ClapTrap& operator=(const ClapTrap& ref);
-        //todo: copy & assignment copy 
         ~ClapTrap();
         void attack(const std::string& target);
         void takeDamage(unsigned int amount);

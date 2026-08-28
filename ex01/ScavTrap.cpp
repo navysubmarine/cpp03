@@ -7,9 +7,6 @@ ScavTrap::ScavTrap() : ClapTrap()
     energy_pts = 50;
     attack_damage_pts = 20;
     std::cout << "ScavTrap named " << my_name << " has been created." << std::endl;
-    // std::cout << my_name << "'s hit points: " << hit_pts << std::endl;
-    // std::cout << my_name << "'s energy points: " << energy_pts << std::endl;
-    // std::cout << my_name << "'s attack damage points: " << attack_damage_pts << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
@@ -18,9 +15,6 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
     energy_pts = 50;
     attack_damage_pts = 20;
     std::cout << "ScavTrap named " << my_name << " has been created." << std::endl;
-    // std::cout << my_name << "'s hit points: " << hit_pts << std::endl;
-    // std::cout << my_name << "'s energy points: " << energy_pts << std::endl;
-    // std::cout << my_name << "'s attack damage points: " << attack_damage_pts << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap& ref) : ClapTrap(ref)

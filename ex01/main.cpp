@@ -1,26 +1,10 @@
-// #include "ClapTrap.hpp"
-// #include "ScavTrap.hpp"
-
-// int main ()
-// {
-//     ClapTrap c1("Bisou");
-//     ScavTrap c2("Anguerrand");
-//     c2.attack("John");
-//     c2.attack("John");
-//     c2.takeDamage(5);
-//     c2.takeDamage(5);
-//     c2.beRepaired(5);
-//     c2.guardGate();
-//     c1.attack("Vanessa");
-// }
-
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
 int main()
 {
     ClapTrap a("Antonia");
-    ScavTrap b("Daisy");
+    ScavTrap b("Bob");
     a.attack("Target");
     b.attack("Target");
 
