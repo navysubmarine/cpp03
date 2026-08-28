@@ -7,9 +7,6 @@ FragTrap::FragTrap() : ClapTrap()
     energy_pts = 100;
     attack_damage_pts = 30;
     std::cout << "FragTrap named " << my_name << " has been created." << std::endl;
-    // std::cout << my_name << "'s hit points: " << hit_pts << std::endl;
-    // std::cout << my_name << "'s energy points: " << energy_pts << std::endl;
-    // std::cout << my_name << "'s attack damage points: " << attack_damage_pts << std::endl;
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
@@ -18,9 +15,6 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
     energy_pts = 100;
     attack_damage_pts = 30;
     std::cout << "FragTrap named " << my_name << " has been created." << std::endl;
-    // std::cout << my_name << "'s hit points: " << hit_pts << std::endl;
-    // std::cout << my_name << "'s energy points: " << energy_pts << std::endl;
-    // std::cout << my_name << "'s attack damage points: " << attack_damage_pts << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap& ref) : ClapTrap(ref)
@@ -34,10 +28,7 @@ FragTrap::FragTrap(const FragTrap& ref) : ClapTrap(ref)
 
 FragTrap& FragTrap::operator=(const FragTrap& ref)
 {
-    my_name = ref.my_name;
-    hit_pts = ref.hit_pts;
-    energy_pts = ref.energy_pts;
-    attack_damage_pts = ref.attack_damage_pts;
+    ClapTrap::operator=(ref);
     std::cout << "FragTrap copy assignment operator called" << std::endl;
     return (*this);
 }

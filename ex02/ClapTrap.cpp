@@ -5,9 +5,8 @@ ClapTrap::ClapTrap(std::string name) : my_name(name), hit_pts(10), energy_pts(10
     std::cout << "Hello my name is " << my_name << "." << std::endl;
 }
 
-ClapTrap::ClapTrap() : my_name("Yannick"), hit_pts(10), energy_pts(10), attack_damage_pts(0)
+ClapTrap::ClapTrap() : hit_pts(10), energy_pts(10), attack_damage_pts(0)
 {
-    std::cout << "Hello my name is " << my_name << "." << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& ref) : my_name(ref.my_name), hit_pts(ref.hit_pts), energy_pts(ref.energy_pts), attack_damage_pts(ref.attack_damage_pts)
@@ -27,17 +26,17 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& ref)
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Claptrap named " << my_name << " died." << std::endl;
+    std::cout << "Claptrap " << my_name << " is dead." << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target)
 {
-    if (energy_pts == 0)
+    if (energy_pts <= 0)
     {
         std::cout << "I dont have any energy..." << std::endl;
         return;
     }
-    else if (hit_pts == 0)
+    else if (hit_pts <= 0)
     {
         std::cout << "I dont have any hit points left..." << std::endl;
         return;
@@ -46,7 +45,7 @@ void ClapTrap::attack(const std::string& target)
     attack_damage_pts << " points of damage !!!" << std::endl;
     std::cout << "-1 energy point." << std::endl;
     energy_pts--;
-    std::cout << "ClapTrap named " << my_name << ": Current energy points : " << energy_pts << std::endl << std::endl;
+    std::cout << "ClapTrap " << my_name << ": Current energy points : " << energy_pts << std::endl << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
@@ -58,7 +57,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-    if (energy_pts == 0)
+    if (energy_pts <= 0)
     {
         std::cout << "I dont have any energy..." << std::endl;
         return;
