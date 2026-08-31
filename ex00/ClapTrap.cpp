@@ -32,14 +32,14 @@ ClapTrap::~ClapTrap()
 
 void ClapTrap::attack(const std::string& target)
 {
-    if (energy_pts == 0)
+    if (energy_pts <= 0)
     {
-        std::cout << "I dont have any energy..." << std::endl;
+        std::cout << "I cannot attack, I dont have any energy..." << std::endl;
         return;
     }
-    else if (hit_pts == 0)
+    else if (hit_pts <= 0)
     {
-        std::cout << "I dont have any hit points left..." << std::endl;
+        std::cout << "I cannot attack, I dont have any hit points left..." << std::endl;
         return;
     }
     std::cout << "ClapTrap " << name << " attacks " << target << ", causing " << 
@@ -58,9 +58,9 @@ void ClapTrap::takeDamage(unsigned int amount)
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-    if (energy_pts == 0)
+    if (energy_pts <= 0)
     {
-        std::cout << "I dont have any energy..." << std::endl;
+        std::cout << "I cannot repair myself, I dont have any energy..." << std::endl;
         return;
     }
     std::cout << "ClapTrap " << name << " is repairing himself... Regaining " << amount << " hit point(s)" << std::endl;

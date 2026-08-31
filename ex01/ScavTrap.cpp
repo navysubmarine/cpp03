@@ -36,7 +36,6 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& ref)
     return (*this);
 }
 
-
 ScavTrap::~ScavTrap()
 {
     std::cout << "ScavTrap " << my_name << " is dead." << std::endl;

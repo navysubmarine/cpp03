@@ -7,5 +7,8 @@ int main ()
     c1.attack("John");
     c1.takeDamage(5);
     c1.takeDamage(5);
+    c1.attack("John");
+    c1.takeDamage(5);
+    c1.attack("John");
     c1.beRepaired(5);
 }
